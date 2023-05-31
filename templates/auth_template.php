@@ -42,9 +42,11 @@
 <?php function draw_alerts(Session $session){
     $messages = $session->getMessages();
 
-    foreach($messages as $message){
-        if($message['type'] == 'error')
-            echo '<script>window.onload = function() { alert("' . $message['text'] . '"); };<script>';
+    foreach ($messages as $message) {
+        if ($message['type'] === 'error') {
+            echo '<script>window.onload = function() { alert("' . $message['text'] . '"); };</script>';
+        }
     }
+
 }
 ?>
