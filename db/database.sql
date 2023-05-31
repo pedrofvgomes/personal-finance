@@ -1,7 +1,9 @@
 drop table if exists Account;
 drop table if exists Expense;
 drop table if exists Income;
-drop table if  exists Category;
+drop table if exists Category;
+drop table if exists Goal;
+drop table if exists Saving;
 
 create table Account(
     id integer not null primary key autoincrement,
@@ -33,6 +35,18 @@ create table Income(
 create table Category(
     id integer not null primary key autoincrement,
     name varchar(255) not null
+);
+
+create table Goal(
+    id integer not null primary key autoincrement,
+    name varchar(255) not null,
+    amount integer not null
+);
+
+create table Saving(
+    id integer not null primary key autoincrement,
+    goal integer not null references Goal(id),
+    amount integer not null
 );
 
 INSERT INTO Category (name) VALUES ('Food'), ('Education'), ('Transportation'), ('Health'), ('Entertainment'), ('House');
