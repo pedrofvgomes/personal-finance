@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    font-family: 'Inter';
+    font-weight: 900;
+}
+*::selection{
+    background-color: #515151;
+    color: white;
+}
+
+
+html, body{
+    background-color: #cfcfcf;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    display: flex;
+}
+
+#auth{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+}
+
+.auth{
+    background-color: white;
+    border-radius: 15px;
+    width: 33%;
+    margin: auto;
+    padding: 1.5em;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 5px 16px 0px rgba(0, 0, 0, 0.17);
+}
+.auth:first-of-type{
+    margin-right: 1em;
+    margin-left: auto;
+}
+.auth:nth-of-type(2){
+    margin-right: auto;
+    margin-left: 1em;
+}
+.auth h2{
+    color: #515151;
+    margin: 0;
+    font-size: 30px;
+}
+.auth span, .auth input{
+    color: #4759ca;
+}
+.auth span{
+    margin-top: 1em;
+    margin-bottom: 5px;
+    font-size: 15px;
+}
+.auth input{
+    padding: 1em;
+    border: solid 2px rgba(81, 81, 81, 0.5);
+    border-radius: 20px;
+    background-color: rgba(207, 207, 207, 0.5);
+    font-size: 20px;
+}
+.auth input:focus{
+    outline: solid 1px #4759ca;
+    border: solid 1px #4759ca;
+}
+.auth input[type="submit"]{
+    background-color: #4759ca;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    margin: auto;
+    margin-top: 1em;
+    font-size: 20px;
+    width: 35%;
+    padding: 0.5em;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+}
+.auth input[type="submit"]:hover{
+    cursor: pointer;
+}
+.auth input:hover{
+    box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.25);
+}
