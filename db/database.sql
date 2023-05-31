@@ -11,7 +11,7 @@ create table Account(
     email varchar(255) not null,
     password varchar(255) not null,
     name varchar(255),
-    balance integer
+    balance integer,
     datecreated timestamp default current_timestamp
 );
 
